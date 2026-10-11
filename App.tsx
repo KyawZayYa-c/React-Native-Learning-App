@@ -1,14 +1,16 @@
 import React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
+import FlatCards from './components/FlatCards';
+import EvaluatedCard from './components/EvaluatedCard';
+import FancyCard from './components/FancyCard';
 function App() {
   return (
     <SafeAreaView>
-      <View>
-        <Text>Hello, World! 1</Text>
-        <Text>Hello, World! 2</Text>
-        <Text>Hello, World! 3</Text>
-        <Text>Hello, World! 4</Text>
-      </View>
+      <ScrollView>
+        <FlatCards />
+        <EvaluatedCard />
+        <FancyCard />
+      </ScrollView>
     </SafeAreaView>
       
   )
