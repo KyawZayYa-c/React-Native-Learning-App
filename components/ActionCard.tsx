@@ -15,8 +15,9 @@ const ActionCard = () => {
           </Text>
         </View>
         
-        <Image source={{
-          uri : 'https://kyawzayya.vercel.app/'
+        <Image
+          source={{
+          uri : 'https://res.cloudinary.com/dg52gsebs/image/upload/v1784604891/myProfile_f8w39q.jpg'
         }}
           style={styles.cardImage}
         />
@@ -45,14 +46,59 @@ const ActionCard = () => {
   )
 }
 const styles = StyleSheet.create({
-  headingText: {},
-  card: {},
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
-  cardImage: {},
-  bodyContainer: {},
-  footerContainer: {},
-  socialLink : {}
+  headingText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    paddingHorizontal : 8,
+  },
+  card: {
+    width: 330,
+    height: 345,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal : 16,
+  },
+  elevatedCard: {
+    backgroundColor: '#C86514',
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height : 1,
+    },
+    shadowColor: "#333",
+    shadowOpacity : 0.4,
+  },
+  headingContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems : 'center',
+  },
+  headerText: {
+    color: '#000',
+    fontSize : 16,
+    fontWeight : '600',
+  },
+  cardImage: {
+    width: 330,
+    height: 190,
+    backgroundColor: '#BF14C8',
+  },
+  bodyContainer: {
+    padding: 10, 
+  },
+  footerContainer: {
+    padding: 8, 
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent : 'space-evenly',
+  },
+  socialLink : {
+    fontSize: 16,
+    color: '#000000',
+    backgroundColor: '#ffffff',
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+  }
 })
-export default ActionCard
+export default ActionCard;
