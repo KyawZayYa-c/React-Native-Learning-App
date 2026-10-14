@@ -1,24 +1,30 @@
 import React from 'react';
-import { SafeAreaView, ScrollView } from 'react-native';
-import FlatCards from './components/FlatCards';
-import EvaluatedCard from './components/EvaluatedCard';
-import FancyCard from './components/FancyCard';
-import ActionCard from './components/ActionCard';
-import ContactList from './components/ContactList';
+import { ScrollView, StyleSheet, SafeAreaView } from 'react-native';
+import PasswordGenerator from './components/PasswordGenerater';
+
+
 function App() {
   return (
-    <SafeAreaView style = {{paddingVertical : 35}} >
-      <ScrollView>
-        <FlatCards />
-        <EvaluatedCard />
-        <FancyCard />
-        <ContactList />
-        <ActionCard/> 
-      </ScrollView>
-    </SafeAreaView>
-      
-  )
-  
+    <ScrollView 
+      keyboardShouldPersistTaps='handled' 
+      contentContainerStyle={styles.scrollContainer}
+    >
+      <SafeAreaView style={styles.appContainer}>
+        <PasswordGenerator />
+      </SafeAreaView>
+    </ScrollView>
+  );
 }
+
+const styles = StyleSheet.create({
+  scrollContainer: {
+    flexGrow: 1,
+    backgroundColor: '#082F50',
+  },
+  appContainer: {
+    flex: 1,
+    paddingVertical: 20,
+  },
+});
 
 export default App;
